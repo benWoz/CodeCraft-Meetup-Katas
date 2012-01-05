@@ -1,0 +1,10 @@
+puts "Watching your code and shit..."
+
+def run_specs
+  puts "Running specs, yo!"
+  system "rspec specs"
+end
+
+watch('specs/.*_spec\.rb') { run_specs }
+watch('lib/.*\.rb') { run_specs }
+
